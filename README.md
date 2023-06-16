@@ -10,7 +10,7 @@ It creates a library called **libftprintf.a** with all those functions I might n
 
 If you want to use the library, first you have to download the files by cloning the git repository:
 ```
-git clone https://github.com/PaLucena/libftprintf
+git clone git@github.com:PaLucena/libftprintf.git
 ```
 
 To create that library, all you need to do (if you have it installed) is to enter the project and call `make`;
