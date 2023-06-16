@@ -13,7 +13,7 @@ If you want to use the library, first you have to download the files by cloning 
 git clone https://github.com/PaLucena/libftprintf
 ```
 
-To create that library, all you need to do (if you have it installed) is to enter the project (`cd`) and call `make`;
+To create that library, all you need to do (if you have it installed) is to enter the project and call `make`;
 
 ```
 cd libftprintf
