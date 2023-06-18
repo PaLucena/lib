@@ -6,7 +6,7 @@
 #    By: palucena <palucena@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/16 10:17:41 by palucena          #+#    #+#              #
-#    Updated: 2023/06/18 20:06:40 by palucena         ###   ########.fr        #
+#    Updated: 2023/06/18 20:24:15 by palucena         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -105,7 +105,7 @@ $(OBJ_DIR):
 $(NAME): $(OBJS)
 	@ ar rcs $(NAME) $(OBJS)
 	@ ranlib $(NAME)
-	@ echo "		Pipex compiled!!\n"
+	@ echo "		Libftprintf compiled!!\n"
 
 clean:
 	@ $(RM) $(OBJ_DIR)
