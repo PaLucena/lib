@@ -6,11 +6,20 @@
 /*   By: palucena <palucena@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 19:15:07 by gkrusta           #+#    #+#             */
-/*   Updated: 2023/06/27 17:08:04 by palucena         ###   ########.fr       */
+/*   Updated: 2023/06/27 17:37:17 by palucena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char	*ft_concat_free(char *str_ac, char *temp)
+{
+	char	*joined_str;
+
+	joined_str = ft_strjoin_mod(str_ac, temp);
+	free(str_ac);
+	return (joined_str);
+}
 
 char	*ft_find_char(int fd, char *str_ac)
 {
@@ -36,15 +45,6 @@ char	*ft_find_char(int fd, char *str_ac)
 	}
 	free(temp);
 	return (str_ac);
-}
-
-char	*ft_concat_free(char *str_ac, char *temp)
-{
-	char	*joined_str;
-
-	joined_str = ft_strjoin_mod(str_ac, temp);
-	free(str_ac);
-	return (joined_str);
 }
 
 char	*ft_get_line(char *str_ac)

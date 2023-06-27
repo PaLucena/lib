@@ -6,7 +6,7 @@
 #    By: palucena <palucena@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/18 16:54:11 by palucena          #+#    #+#              #
-#    Updated: 2023/06/27 16:46:23 by palucena         ###   ########.fr        #
+#    Updated: 2023/06/27 17:34:10 by palucena         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ SOURCE = ft_isalpha.c\
 		ft_putchar_fd.c\
 		ft_putstr_fd.c\
 		ft_putendl_fd.c\
-		ft_putnbr_fd.c
+		ft_putnbr_fd.c\
 		ft_lstnew_bonus.c\
 		ft_lstadd_front_bonus.c\
 		ft_lstsize_bonus.c\
@@ -77,16 +77,17 @@ LIB = ar rcs
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(LIB) $(NAME) $(OBJ)
+	@echo "\n		Compiling library..."
+	@$(LIB) $(NAME) $(OBJ)
 
 $(OBJ): $(SOURCE)
-	$(CC) $(CFLAGS) -c $(SOURCE)
+	@$(CC) $(CFLAGS) -c $(SOURCE)
 
 clean:
-	rm -f $(OBJ) $(OBJ_BONUS)
+	@rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 

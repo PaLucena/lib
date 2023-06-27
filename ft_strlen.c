@@ -6,13 +6,13 @@
 /*   By: palucena <palucena@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 11:39:49 by palucena          #+#    #+#             */
-/*   Updated: 2023/06/27 17:08:53 by palucena         ###   ########.fr       */
+/*   Updated: 2023/06/27 17:36:14 by palucena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strlen(const char *str)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
