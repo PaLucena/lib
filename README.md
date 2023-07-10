@@ -1,4 +1,4 @@
-# Mylibft
+# Lib
 
 As a 42 student, I can't use some standard libraries in C, so I have to create my own in an excercise of further comprehension of the functions which I utilise daily in my advances through the 42 Cursus.
 
