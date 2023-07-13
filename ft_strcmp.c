@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: palucena <palucena@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/18 11:37:45 by palucena          #+#    #+#             */
-/*   Updated: 2023/07/12 17:53:42 by palucena         ###   ########.fr       */
+/*   Created: 2023/07/07 13:20:11 by palucena          #+#    #+#             */
+/*   Updated: 2023/07/13 13:40:16 by palucena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 /**
- * @brief Checks for any printable character including space.
+ * @brief Compares the string s1 against the string s2.
  * 
- * @param c -> character to check
- * @return int -> 1 if c is printable, 0 otherwise
+ * @param s1 -> First string to compare
+ * @param s2 -> Second string to compare
+ * @return int -> 0 if the strings are identical, 
+ * 				  otherwise returns the difference
  */
-int	ft_isprint(int c)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
+	while (*s1 && *s2 && *s1 == *s2)
+	{
+		s1++;
+		s2++;
+	}
+	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }
