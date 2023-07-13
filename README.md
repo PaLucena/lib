@@ -12,13 +12,13 @@ It creates a library called **libft.a** with all those functions I might need in
 
 If you want to use the library, first you have to download the files by cloning the git repository:
 ```
-git clone git@github.com:PaLucena/libftprintf.git
+git clone git@github.com:PaLucena/libftprintf.git lib
 ```
 
 To create that library, all you need to do (if you have it installed) is to enter the project and call `make`;
 
 ```
-cd libftprintf
+cd lib
 make
 ```
 
