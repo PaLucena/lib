@@ -18,28 +18,29 @@ SOURCE_GNL =		get_next_line.c get_next_line_utils.c
 
 SOURCE_OWN =		ft_strcmp.c
 
-OBJ_PATH = objs/
-OBJ_LIBFT_PATH = $(OBJ_PATH)libft/
-OBJ_PRINTF_PATH = $(OBJ_PATH)printf/
-OBJ_GNL_PATH = $(OBJ_PATH)gnl/
-OBJ_OWN_PATH = $(OBJ_PATH)own/
+OBJ_PATH =			objs/
+OBJ_LIBFT_PATH =	$(OBJ_PATH)libft/
+OBJ_PRINTF_PATH =	$(OBJ_PATH)printf/
+OBJ_GNL_PATH =		$(OBJ_PATH)gnl/
+OBJ_OWN_PATH =		$(OBJ_PATH)own/
 
-OBJ_LIBFT = $(addprefix $(OBJ_LIBFT_PATH), $(SOURCE_LIBFT:.c=.o))
-OBJ_PRINTF = $(addprefix $(OBJ_PRINTF_PATH), $(SOURCE_PRINTF:.c=.o))
-OBJ_GNL = $(addprefix $(OBJ_GNL_PATH), $(SOURCE_GNL:.c=.o))
-OBJ_OWN = $(addprefix $(OBJ_OWN_PATH), $(SOURCE_OWN:.c=.o))
+OBJ_LIBFT =			$(addprefix $(OBJ_LIBFT_PATH), $(SOURCE_LIBFT:.c=.o))
+OBJ_PRINTF =		$(addprefix $(OBJ_PRINTF_PATH), $(SOURCE_PRINTF:.c=.o))
+OBJ_GNL =			$(addprefix $(OBJ_GNL_PATH), $(SOURCE_GNL:.c=.o))
+OBJ_OWN =			$(addprefix $(OBJ_OWN_PATH), $(SOURCE_OWN:.c=.o))
 
-OBJ = $(OBJ_LIBFT) $(OBJ_PRINTF) $(OBJ_GNL) $(OBJ_OWN)
+OBJ = 				$(OBJ_LIBFT) $(OBJ_PRINTF) $(OBJ_GNL) $(OBJ_OWN)
 
 CC = gcc
-
 CFLAGS = -Wall -Werror -Wextra
+RM = rm -rf
+AR = ar rcs
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	@ mkdir -p $(OBJ_PATH)
-	@ ar rcs $(NAME) $(OBJ)
+	@ $(AR) $(NAME) $(OBJ)
 	@ echo "\n\t\t\033[32m----Library compiled----\n"
 
 $(OBJ_LIBFT_PATH)%.o: $(SOURCE_LIBFT_PATH)%.c
@@ -59,10 +60,10 @@ $(OBJ_OWN_PATH)%.o: $(SOURCE_OWN_PATH)%.c
 	@ $(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@ rm -rf $(OBJ_PATH)
+	@ $(RM) $(OBJ_PATH)
 
 fclean: clean
-	@ rm -f $(NAME)
+	@ $(RM) $(NAME)
 
 re: fclean all
 
