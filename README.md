@@ -4,7 +4,7 @@ As a 42 student, I can't use some standard libraries in C, so I have to create m
 
 Following that note, the goal of this repository is to create exacly that, my own version of those Standard C Library functions and some more that I find useful so I can have access to them in the future.
 
-For the moment, the library includes `libft`, `printf` and `get_next_line`
+For the moment, the library includes `libft`, `printf`, `get_next_line` and some of my own homemade functions that I've found useful during my growth.
 
 ## How does it work?
 
