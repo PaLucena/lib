@@ -6,7 +6,7 @@
 /*   By: palucena <palucena@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 15:38:36 by palucena          #+#    #+#             */
-/*   Updated: 2023/07/13 16:41:15 by palucena         ###   ########.fr       */
+/*   Updated: 2023/09/11 16:57:02 by palucena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,16 +36,12 @@ char	*ft_strnstr(char *str, char *to_find, size_t n)
 		while (to_find[j] != '\0' && (size_t)i + j < n)
 		{
 			if (str[i + j] == to_find[j])
-			{
 				j++;
-			}
 			else
 				break ;
 		}
 		if (to_find[j] == '\0')
-		{
 			return ((char *)str + i);
-		}
 		i++;
 	}
 	return (0);
